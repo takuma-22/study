@@ -10,7 +10,7 @@
   <div class="collapse navbar-collapse" id="Navber">
     <ul class="navbar-nav">
       <li class="nav-item ml-2">
-        <a class="nav-link text-white" id="timeline" href="/admin/timeline">タイムライン</a>
+        <a class="nav-link text-white" id="timeline" href="/timeline">タイムライン</a>
       </li>
       <li class="nav-item ml-2">
         <a class="nav-link text-white" href="/question/create">問題作成</a>
@@ -23,7 +23,7 @@
 
     <ul class="navbar-nav ml-auto mr-5">
       <li class="nav-item ml-2">
-        <a class="nav-link text-white" href="/admin/profile">プロフィール</a>
+        <a class="nav-link text-white"id="profile" href="/user/profile">プロフィール</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link text-white" href="/home">ホーム</a>

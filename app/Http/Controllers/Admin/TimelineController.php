@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 
 class TimelineController extends Controller
 {
-    public function add()
+    public function index()
     {
         return view('admin.timeline');
         }

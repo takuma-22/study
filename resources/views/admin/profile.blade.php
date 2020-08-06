@@ -4,8 +4,8 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-8 mx-auto">
-                <h2>プロフィール</h2>
+            <div class="col-8 text-center">
+                <h2 class="m-3 p-3 ">プロフィール</h2>
                 <form action="{{ action('Admin\ProfileController@add') }}" method="post" enctype="multipart/form-data">
 
                     @if (count($errors) > 0)
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     {{ csrf_field() }}
-                    <input type="submit" class="btn btn-primary" value="保存">
+                    <a type="button" href="/home"class="btn btn-primary btn-lg btn-block" >保存</a>
                 </form>
             </div>
         </div>
