@@ -41,11 +41,10 @@
                     <a type="button" href="/comment/hyouji" class="col-sm-4 col-md-3 btn btn-outline-primary ">コメントをみる</a>
                     <a class="col-sm-4 col-md-3 text-right d-flex align-items-center">
                         <i class="fas fa-ellipsis-v  text-right">時間</i>
-                    </div>
                 </div>
             </div>
         </div>
-    s</div>
+    </div>
     <div class="my-4 d-flex justify-content-center">
     </div>
 </div>

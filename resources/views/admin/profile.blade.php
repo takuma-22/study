@@ -2,18 +2,17 @@
 @section('profile', 'プロフィール')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-8 text-center">
-                <h2 class="m-3 p-3 ">プロフィール</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-8 text-center">
+            <h2 class="m-3 p-3 ">プロフィール</h2>
                 <form action="{{ action('Admin\ProfileController@add') }}" method="post" enctype="multipart/form-data">
-
                     @if (count($errors) > 0)
-                        <ul>
-                            @foreach($errors->all() as $e)
-                                <li>{{ $e }}</li>
-                            @endforeach
-                        </ul>
+                    <ul>
+                        @foreach($errors->all() as $e)
+                        <li>{{ $e }}</li>
+                        @endforeach
+                    </ul>
                     @endif
                     <div class="form-group row">
                         <label class="col-md-2">名前</label>
@@ -36,7 +35,7 @@
                     {{ csrf_field() }}
                     <a type="button" href="/home"class="btn btn-primary btn-lg btn-block" >保存</a>
                 </form>
-            </div>
         </div>
     </div>
+</div>
 @endsection

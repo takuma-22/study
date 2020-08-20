@@ -5,18 +5,16 @@
     <div class="row ">
         <div class="col-md-8  text-center">
             <h1 class="m-3 p-3 ">タイムライン<i class="fas fa-users" ></i> </h1>
-        
-        <div class="form-group row">
-            <lavel class="col-md-2">ジャンル</lavel>
-            <div class="col-md-10 ">
-                <select type="button" class="btn btn-defalt btn-lg btn-block ">
-                    @foreach(config('genre') as $key => $genre)
-                    <option name="genre"　role="button"　data-toggle="dropdown" value="{{ $key }}">{{ $genre['genre'] }}</option>
-                    @endforeach
+            <div class="form-group row">
+                <lavel class="col-md-2">ジャンル</lavel>
+                <div class="col-md-10 ">
+                    <select type="button" class="btn btn-defalt btn-lg btn-block ">
+                        @foreach(config('genre') as $key => $genre)
+                        <option name="genre"　role="button"　data-toggle="dropdown" value="{{ $key }}">{{ $genre['genre'] }}</option>
+                        @endforeach
                     </select>
+                </div>
             </div>
-        </div>
-        
         </div>
         <div class="col-md-8 mb-3 text-center">
             <div class="card">
@@ -38,12 +36,10 @@
                     <a type="button" href="/comment/hyouji" class="col-sm-4 col-md-3 btn btn-outline-primary ">コメントをみる</a>
                     <a class="col-sm-4 col-md-3 text-right d-flex align-items-center">
                         <i class="fas fa-ellipsis-v  text-right">時間</i>
-                    </div>
+
                 </div>
             </div>
         </div>
-        
-        
     </div>
     <div class="my-4 d-flex justify-content-center">
     </div>

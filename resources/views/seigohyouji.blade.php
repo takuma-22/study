@@ -23,8 +23,6 @@
                     <a type="button" href="/comment/toukou" class="col-sm-4 col-md-3 btn btn-outline-primary ">コメント</a>
                     <a type="button" class="col-sm-4 col-md-3 btn btn-outline-primary" >答えの誤りを指摘</a>
                     
-                
-                </div>
                 </div>
             </div>
             {{ csrf_field() }}

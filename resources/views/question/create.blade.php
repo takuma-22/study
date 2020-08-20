@@ -34,6 +34,7 @@
                     <div class="col-md-10">
                         <select type="button" class="btn btn-defalt btn-lg btn-block">
                             @foreach(config('style') as $key => $style)
+                            
                             <option name="genre"　role="button"　data-toggle="dropdown" value="{{ $key }}">{{ $style['style'] }}</option>
                             @endforeach
                         </select>
@@ -42,21 +43,14 @@
                 <div class="form-group row">
                     <label class="col-md-2">答え</label>
                     <div class="col-md-10">
-                        @if($style =='5肢択一')
-                        
+                       
                             <input class="form-control form-control-lg"　 type="text" placeholder="1">
                             <input class="form-control form-control-lg" type="text" placeholder="2">
                             <input class="form-control form-control-lg" type="text" placeholder="3">
                             <input class="form-control form-control-lg" type="text" placeholder="4">
                             <input class="form-control form-control-lg" type="text" placeholder="5">
                             
-                            @elseif($style =='4肢択一')
-                            <input class="form-control form-control-lg" type="text" placeholder="1">
-                            <input class="form-control form-control-lg" type="text" placeholder="2">
-                            <input class="form-control form-control-lg" type="text" placeholder="3">
-                            <input class="form-control form-control-lg" type="text" placeholder="4">
                             
-                            @endif
                             
                         </div>
                     </div>    

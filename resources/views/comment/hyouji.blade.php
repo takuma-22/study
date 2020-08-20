@@ -5,7 +5,6 @@
     <div class="row ">
         <div class="col-md-8  text-center">
             <h1 class="m-3 p-3 ">コメント<i class="fas fa-users" ></i> </h1>
-        
         </div>
         <div class="col-md-8 mb-3 text-center">
             <div class="card">
@@ -22,14 +21,11 @@
                 </div>
                 <div class="card-footer text-center d-flex bg-white">
                     <i class="fas fa-ellipsis-v  text-right">時間</i>
-                    </div>
                 </div>
             </div>
         </div>
         {{ csrf_field() }}
         <a type="button" href="/timeline" class="btn btn-primary btn-md ">戻る</a>
-        
-        
     </div>
     <div class="my-4 d-flex justify-content-center">
     </div>
