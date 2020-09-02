@@ -11,6 +11,18 @@ class CreateController extends Controller
     {
         return view('question.create');
         
+        
+    }
+    public function create(Request $request) 
+    {
+        $this -> $request->validate([ 
+            'question' => ['genre', 'style', 'colans','kaisetu'], 
+        ]);
+        Question::create([ 
+            'user_id' => Auth::user()->id, 
+            'question' => $request->question, 
+        ]);
+        return back(); 
     }
     //
 }

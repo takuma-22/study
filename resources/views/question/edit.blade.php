@@ -1,11 +1,11 @@
 @extends('layouts.common')
-@section('create', '問題作成')
+@section('create', '問題編集')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-8 text-center">
-                <h2 class="m-3 p-3 ">問題作成</h2>
+                <h2 class="m-3 p-3 ">問題編集</h2>
                 @if (count($errors) > 0)
                 <ul>
                     @foreach($errors->all() as $e)
@@ -23,7 +23,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-group row">
+                          <div class="form-group row">
                     <label class="col-md-2">問題本文</label>
                     <div class="col-md-10">
                         <textarea class="form-control" name="text" rows="10">{{ old('text') }}</textarea>
@@ -55,9 +55,9 @@
                         <div class="col-md-10">
                             <textarea class="form-control" name="kaisetu" rows="10">{{ old('kaisetu') }}</textarea>
                         </div>
-                    </div>    
+                    </div>      
                 {{ csrf_field() }}
-                    <a type="button" href="/home" class="btn btn-primary btn-lg btn-block" >問題を作成</a>
+                    <a type="button" href="/home" class="btn btn-primary btn-lg btn-block" >保存</a>
                     <a type="button" href="/timeline" class="btn btn-secondary btn-lg btn-block" >キャンセル</a>
             </div>
         </div>

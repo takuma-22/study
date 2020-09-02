@@ -46,7 +46,3 @@ Route::get('question/answer', 'Question\AnswerController@add')->name('question/a
 Route::get('seigohyouji', 'SeigohyoujiController@index')->name('seigohyouji');
 
 Auth::routes();
-
-
-
-

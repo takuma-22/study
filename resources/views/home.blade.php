@@ -23,7 +23,7 @@
                 <div class="card-footer text-center mr-3-3 d-flex bg-white"id="Navber">
                     <a type="button" class="col-sm-3 col-md-2 btn btn-outline-primary">👍</a>
                     <a type="button" class="col-sm-3 col-md-2 btn btn-outline-primary">👎</a>
-                    <a type="button" href="/question/answer" class="col-sm-4 col-md-3 btn btn-outline-primary" >回答する</a>
+                    <a type="button" href="/question/edit" class="col-sm-4 col-md-3 btn btn-outline-primary" >問題を編集</a>
                     <a type="button" href="/comment/hyouji" class="col-sm-4 col-md-3 btn btn-outline-primary ">コメントをみる</a>
                     <a class="col-sm-4 col-md-3 text-right d-flex align-items-center">
                         <i class="fas fa-ellipsis-v  text-right">時間</i>

@@ -17,7 +17,7 @@ class QuestionTable extends Migration
             $table->bigIncrements('id');
             $table->string('user_id'); 
             $table->string('genre'); 
-            $table->string('question');
+            $table->string('text');
             $table->string('style');
             $table->string('ans1');
             $table->string('ans2');
