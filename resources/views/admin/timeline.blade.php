@@ -5,6 +5,7 @@
     <div class="row ">
         <div class="col-md-8  text-center">
             <h1 class="m-3 p-3 ">タイムライン<i class="fas fa-users" ></i> </h1>
+            <form action="{{ action('Admin\TimelineController@index') }}" method="get">
             <div class="form-group row">
                 <lavel class="col-md-2">ジャンル</lavel>
                 <div class="col-md-10 ">
@@ -16,18 +17,19 @@
                 </div>
             </div>
         </div>
+        @foreach(config('genre')  as $post => $timeline)
         <div class="col-md-8 mb-3 text-center">
             <div class="card">
                 <div class="card-haeder p-3 w-100 d-flex">
                     <div class="ml-2 d-flex flex-column">
-                        <a class="text-secondary">本文</a>
+                        <a class="text-secondary">{{ $timeline->text }}</a>
                     </div>
                     <div class="d-flex justify-content-end flex-grow-1">
-                        <p class="mb-0 text-secondary">画像</p>
+                        <p class="mb-0 text-secondary">{{ $timeline->image_path }}</p>
                     </div>
                 </div>
                 <div class="card-body text-right">
-                     <p class="mb-0">ユーザー名</p>
+                     <p class="mb-0">{{ $timeline->name }}</p>
                 </div>
                 <div class="card-footer text-center mr-3-3 d-flex bg-white"id="Navber">
                     <a type="button" class="col-sm-3 col-md-2 btn btn-outline-primary">👍</a>
@@ -40,8 +42,11 @@
                 </div>
             </div>
         </div>
+       @endforeach
     </div>
     <div class="my-4 d-flex justify-content-center">
+       
     </div>
 </div>
+
 @endsection

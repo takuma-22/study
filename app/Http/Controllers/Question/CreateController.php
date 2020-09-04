@@ -16,13 +16,20 @@ class CreateController extends Controller
     public function create(Request $request) 
     {
         $this -> $request->validate([ 
-            'question' => ['genre', 'style', 'colans','kaisetu'], 
+            'question' => ['genre', 'style', 'colans','kaisetu','ans1','ans2','ans3','ans4','ans5',], 
         ]);
+        
+        $question = new Question;
+        $form = $request->all();
+        
         Question::create([ 
             'user_id' => Auth::user()->id, 
             'question' => $request->question, 
         ]);
-        return back(); 
+        $question->fill($form);
+        $question->save();
+        return back();
+        
     }
     //
 }

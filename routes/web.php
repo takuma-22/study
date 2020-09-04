@@ -18,6 +18,8 @@ Route::get('/', function () {
 
 // ホーム画面を表示するルーティング
 Route::get('home', 'HomeController@index')->name('home');
+Route::get('/home/like/{id}', 'HomeController@like')->name('home');
+Route::get('/home/unlike/{id}', 'HomeController@unlike')->name('home');
 
 // タイムライン画面のルーティング
 Route::get('timeline', 'Admin\TimelineController@index')->name('timeline');
@@ -27,11 +29,14 @@ Route::get('timeline', 'Admin\TimelineController@index')->name('timeline');
 Route::group(['prefix' => 'user'], function(){
     // プロフィールの情報追加画面
     Route::get('profile', 'Admin\ProfileController@add')->name('profile');
+    Route::post('profile', 'Admin\ProfileController@create')->name('profile');
     
 });
 
 // 問題を作成するルーティング
 Route::get('question/create', 'Question\CreateController@add')->name('question/create');
+Route::post('question/create', 'Question\CreateController@create')->name('question/create');
+
 
 //コメントを投稿するルーティング
 Route::get('comment/toukou', 'Comment\ToukouController@add')->name('comment/toukou');

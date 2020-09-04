@@ -6,6 +6,7 @@
         <div class="row">
             <div class="col-md-8 text-center">
                 <h2 class="m-3 p-3 ">問題作成</h2>
+                <form action="{{ action('Question\CreateController@create') }}" method="post" enctype="multipart/form-data">
                 @if (count($errors) > 0)
                 <ul>
                     @foreach($errors->all() as $e)
@@ -32,7 +33,7 @@
                 <div class="form-group row">
                     <label class="col-md-2">回答形式</label>
                     <div class="col-md-10">
-                        <select name= "quest" type="button" data-toggle="dropdown" role="button" class="btn btn-defalt btn-lg btn-block" onchange="changeSelect()">
+                        <select name= "style" type="button" data-toggle="dropdown" role="button" class="btn btn-defalt btn-lg btn-block" onchange="changeSelect()">
                             <option id="quest5" value='5'>5肢択一</option>
                             <option id="quest4" value='4'>4肢択一</option>
                         </select> 
@@ -47,7 +48,7 @@
                 <div class="form-group row">
                     <label class="col-md-2">答え</label>
                     <div class="col-md-10">
-                        <input class="form-control form-control-lg" type="text" placeholder="答え">
+                        <input class="form-control form-control-lg" name="colans" type="text" placeholder="答え">
                     </div>
                 </div>    
                     <div class="form-group row">

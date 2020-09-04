@@ -10,6 +10,13 @@ return [
     'Name' => '名前',
     'Confirm Password' => 'パスワード確認',
     'timeline'=>'タイムライン',
+    'title' => 'タイトル',
+    'genre'=>'ジャンル',
+    'text' => '本文',
+    'question'=>'問題',
+    'style' => '回答形式',
+    'body'=>'コメント',
+    
 
     
 ];
