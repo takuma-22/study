@@ -18,11 +18,11 @@ Route::get('/', function () {
 
 // ホーム画面を表示するルーティング
 Route::get('home', 'HomeController@index')->name('home');
-Route::get('/home/like/{id}', 'HomeController@like')->name('home');
-Route::get('/home/unlike/{id}', 'HomeController@unlike')->name('home');
+
 
 // タイムライン画面のルーティング
 Route::get('timeline', 'Admin\TimelineController@index')->name('timeline');
+
 
 
 

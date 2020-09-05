@@ -21,13 +21,7 @@
                      <p class="mb-0">ユーザー名</p>
                 </div>
                 <div class="card-footer text-center mr-3-3 d-flex bg-white"id="Navber">
-                    @if($question->is_good_by_auth_user())
-                    <a href="{{ route('home.unlike', ['id' => $question->id]) }}" type="button" class="col-sm-3 col-md-2 btn btn-outline-primary">👍<span class="badge">{{ $question->goods->count() }}</span></a>
-                    @else
-                    <a href="{{ route('home.like', ['id' => $question->id]) }}" type="button" class="col-sm-3 col-md-2 btn btn-outline-secondary">👍<span class="badge">{{ $question->goods->count() }}</span></a>
-                    @endif
-                    
-                    {{ $question->goods->count() }}
+                    <a type="button" class="col-sm-3 col-md-2 btn btn-outline-primary">👍</a>
                     <a type="button" class="col-sm-3 col-md-2 btn btn-outline-primary">👎</a>
                     <a type="button" href="/question/edit" class="col-sm-4 col-md-3 btn btn-outline-primary" >問題を編集</a>
                     <a type="button" href="/comment/hyouji" class="col-sm-4 col-md-3 btn btn-outline-primary ">コメントをみる</a>
@@ -37,6 +31,7 @@
                 </div>
             </div>
         </div>
+    </div>
     <div class="my-4 d-flex justify-content-center">
     </div>
 </div>

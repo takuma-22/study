@@ -8,7 +8,7 @@ class Good extends Model
 {
      protected $guarded = array('id');
      
-     public function reply()
+     public function question()
   {
     return $this->belongsTo(Question::class);
   }
