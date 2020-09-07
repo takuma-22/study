@@ -8,6 +8,14 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+    public static $rules = array(
+        'name' => 'required',
+        'image_path' => 'required',
+        'profile' => 'required',
+        'email' => 'required',
+        'password' => 'required',
+    );
+        
     use Notifiable;
 
     /**

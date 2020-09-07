@@ -21,11 +21,10 @@
         <div class="col-md-8 mb-3 text-center">
             <div class="card">
                 <div class="card-haeder p-3 w-100 d-flex">
-                  
+                 {{ csrf_field() }}
                     <div class="ml-2 d-flex flex-column">
                         <a class="text-secondary">{{ $question -> text }}</a>
                     </div>
-                    
                     <div class="d-flex justify-content-end flex-grow-1">
                         <p class="mb-0 text-secondary">{{ $user -> image_path }}</p>
                     </div>

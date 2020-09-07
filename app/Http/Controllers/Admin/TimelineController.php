@@ -9,9 +9,11 @@ use App\Question;
 
 class TimelineController extends Controller
 {
-    public function index()
+    public function index( Request $request)
     {
         return view('admin.timeline');
+        
+        $question = Question::latest()->get();
         
     }
     
