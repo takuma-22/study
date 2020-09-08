@@ -9,7 +9,7 @@ class Question extends Model
     protected $guarded = array('id');
     public static $rules=array(
         
-        'user_id'=>'required',
+        'profiles_id'=>'required',
         'genre'=>'required',
         'text'=>'required',
         'style'=>'required',

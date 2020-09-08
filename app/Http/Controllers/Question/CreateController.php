@@ -16,15 +16,13 @@ class CreateController extends Controller
     }
     public function create(Request $request) 
     {
-        $this -> $request->validate([ 
-            'question' => ['genre', 'style', 'colans','kaisetu','ans1','ans2','ans3','ans4','ans5',], 
-        ]);
+        $this->validate($request,Question::$rules);
         
         $question = new Question;
         $form = $request->all();
         
         Question::create([ 
-            'user_id' => Auth::user()->id, 
+            'profiles_id' => Auth::profile()->id, 
             'question' => $request->question, 
         ]);
         $question->fill($form);
@@ -32,5 +30,10 @@ class CreateController extends Controller
         return back();
         
     }
+    public function index(Request $request)
+  {
+      
+      return view('admin.timeline', ['posts' => $posts, ]);
+  }
     //
 }

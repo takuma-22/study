@@ -21,17 +21,20 @@
         <div class="col-md-8 mb-3 text-center">
             <div class="card">
                 <div class="card-haeder p-3 w-100 d-flex">
-                 {{ csrf_field() }}
+                    @foreach( $question as $questions)
                     <div class="ml-2 d-flex flex-column">
-                        <a class="text-secondary">{{ $question -> text }}</a>
+                        <a class="text-secondary">{{ $questions -> text }}</a>
                     </div>
+                    @endforeach
+                    @foreach( $profile as $profiles)
                     <div class="d-flex justify-content-end flex-grow-1">
-                        <p class="mb-0 text-secondary">{{ $user -> image_path }}</p>
+                        <p class="mb-0 text-secondary">{{ $profiles -> image_path }}</p>
                     </div>
                 </div>
                 <div class="card-body text-right">
-                     <p class="mb-0">{{ $users -> name }}</p>
+                     <p class="mb-0">{{ $profiles -> name }}</p>
                 </div>
+                @endforeach
                 <div class="card-footer text-center mr-3-3 d-flex bg-white"id="Navber">
                     <a type="button" class="col-sm-3 col-md-2 btn btn-outline-primary">👍</a>
                     <a type="button" class="col-sm-3 col-md-2 btn btn-outline-primary">👎</a>

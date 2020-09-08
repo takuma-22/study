@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CommentTable extends Migration
+class CommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CommentTable extends Migration
      */
     public function up()
     {
-        Schema::create('comment', function (Blueprint $table){
+        Schema::create('comments', function (Blueprint $table){
             $table->bigIncrements('id');
-            $table->string('user_id');
-            $table->string('question_id');
+            $table->string('profiles_id');
+            $table->string('questions_id');
             $table->string('body');
             $table->timestamps();
         });

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class GoodTable extends Migration
+class MachigaisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class GoodTable extends Migration
      */
     public function up()
     {
-        Schema::create('good', function (Blueprint $table){
+        Schema::create('machigais', function (Blueprint $table){
             $table->bigIncrements('id');
-            $table->string('user_id');
-            $table->string('question_id');
+            $table->string('profiles_id');
+            $table->string('questions_id');
             $table->timestamps();
-        });
         //
+        });
     }
 
     /**

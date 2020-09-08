@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\User;
+use App\Profile;
 
 class ProfileController extends Controller
 {
@@ -14,23 +14,23 @@ class ProfileController extends Controller
     }
     public function create(Request $request)
     {
-        $this->validate($request, User::$rules);
-        $user = new User;
+        $this->validate($request, Profile::$rules);
+        $profile = new Profile;
         $form = $request->all();
         
         if (isset($form['image'])) {
             $path = $request->file('image')->store('public/image');
-            $user->image_path = basename($path);
+            $profile->image_path = basename($path);
         }
         else {
-            $user->image_path = null;
+            $profile->image_path = null;
         }
         
         unset($form['_token']);
         unset($form['image']);
         
-        $user->fill($form);
-        $user->save();
+        $profile->fill($form);
+        $profile->save();
         return redirect('admin/profile');
         
     }

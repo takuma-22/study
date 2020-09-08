@@ -5,6 +5,7 @@
 <div class="container ">
     <div class="row">
         <div class="col-md-8 mx-auto text-center">
+            
             <h1 class="m-3 p-3 ">正解は　です</h1>
             @if (count($errors) > 0)
             <ul>

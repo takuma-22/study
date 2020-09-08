@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class QuestionTable extends Migration
+class QuestionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class QuestionTable extends Migration
      */
     public function up()
     {
-        Schema::create('question', function (Blueprint $table){
+        Schema::create('questions', function (Blueprint $table){
             $table->bigIncrements('id');
-            $table->string('user_id'); 
+            $table->string('profiles_id'); 
             $table->string('genre'); 
             $table->string('text');
             $table->string('style');

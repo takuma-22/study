@@ -9,6 +9,7 @@ class Profile extends Model
     public static $rules = array(
         'name' => 'required',
         'image_path' => 'required',
+        'profile' => 'required',
         
     );
     //
