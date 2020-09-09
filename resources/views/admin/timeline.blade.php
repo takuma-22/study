@@ -23,7 +23,7 @@
                 <div class="card-haeder p-3 w-100 d-flex">
                     @foreach( $question as $questions)
                     <div class="ml-2 d-flex flex-column">
-                        <a class="text-secondary">{{ $questions -> text }}</a>
+                        <a class="text-secondary">{{ $questions->text }}</a>
                     </div>
                     @endforeach
                     @foreach( $profile as $profiles)
@@ -41,8 +41,9 @@
                     <a type="button" href="/question/answer" class="col-sm-4 col-md-3 btn btn-outline-primary" >回答する</a>
                     <a type="button" href="/comment/hyouji" class="col-sm-4 col-md-3 btn btn-outline-primary ">コメントをみる</a>
                     <a class="col-sm-4 col-md-3 text-right d-flex align-items-center">
-                        <i class="fas fa-ellipsis-v  text-right">時間</i>
-
+                        @foreach($posts as $post)
+                        <i class="fas fa-ellipsis-v  text-right">{{ $post->updated_at->format('Y年m月d日') }}</i>
+                       @endforeach
                 </div>
             </div>
         </div>

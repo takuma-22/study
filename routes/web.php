@@ -42,10 +42,10 @@ Route::post('question/create', 'Question\CreateController@create')->name('questi
 Route::get('comment/toukou', 'Comment\ToukouController@add')->name('comment/toukou');
 
 //コメントを表示するルーティング
-Route::get('comment/hyouji', 'Comment\HyoujiController@add')->name('comment/hyouji');
+Route::get('comment/hyouji', 'Comment\HyoujiController@index')->name('comment/hyouji');
 
 //問題を解答するルーティング
-Route::get('question/answer', 'Question\AnswerController@add')->name('question/answer');
+Route::get('question/answer', 'Question\AnswerController@index')->name('question/answer');
 
 //正誤を表示するルーティング
 Route::get('seigohyouji', 'SeigohyoujiController@index')->name('seigohyouji');

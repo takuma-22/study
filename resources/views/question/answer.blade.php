@@ -4,11 +4,12 @@
 @section('content')
     <div class="container">
         <div class="row">
+            @foreach( $question as $questions)
             <div class="col-md-10 text-center">
                 <h2 class="m-3 p-3 ">問題回答</h2>
                 <label class="col-sm-2 control-lavel">問題本文</label>
                     <div class="col-md-10">
-                        <textarea class="form-control" name="text" rows="10">{{ $question -> text }}</textarea>
+                        <textarea class="form-control" name="text" rows="10">{{ $questions->text }}</textarea>
                     </div>
             </div>
             <div class="form-group">
@@ -36,6 +37,7 @@
                     </div>
 
                 </div>
+                @endforeach
                 {{ csrf_field() }}
                 <a href="/seigohyouji" type="button" class="btn btn-primary btn-lg btn-block">回答</a>
             </div>

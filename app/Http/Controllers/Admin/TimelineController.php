@@ -16,11 +16,12 @@ class TimelineController extends Controller
         $question = Question::get();
         $profile =Profile::get();
         
-        return view('admin.timeline', ['question' => $question , 'profile' => $profile ]);
+        $posts = Question::all()->sortByDesc('updated_at');
         
-        
-        
+        return view('admin.timeline', ['question' => $question , 'profile' => $profile , 'posts' => $posts ]);
+    
     }
+    
     
 
 }

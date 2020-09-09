@@ -9,11 +9,11 @@ use App\Question;
 class AnswerController extends Controller
 {
     //
-    public function add()
+    public function index()
     {
         $question = Question::get();
         
-        return view('question.answer', ['question' => $question ]);
+        return view('question.answer', ['question' =>$question ]);
         
     }
 }
