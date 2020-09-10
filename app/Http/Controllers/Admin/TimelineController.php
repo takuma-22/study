@@ -21,6 +21,17 @@ class TimelineController extends Controller
         return view('admin.timeline', ['question' => $question , 'profile' => $profile , 'posts' => $posts ]);
     
     }
+    public function good($id)
+  {
+    Good::create([
+      'question_id' => $id,
+      'profile_id' => Auth::id(),
+    ]);
+
+    session()->flash('success', 'You Liked the Reply.');
+
+    return redirect()->back();
+  }
     
     
 

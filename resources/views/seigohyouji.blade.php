@@ -17,8 +17,9 @@
             <div class="form-group row">
                 <label class="col-md-12"></label>
                 <div class="col-md-12">
-                    <textarea class="form-control" name="comment" rows="10">{{ old('kaisetu') }}</textarea>
-                    
+                    @if($question = $questions)
+                    <textarea class="form-control" name="comment" rows="10">{{ $questions->kaisetu }}</textarea>
+                    @endif
                     <a type="button" class="col-sm-3 col-md-2 btn btn-outline-primary">👍</a>
                     <a type="button" class="col-sm-3 col-md-2 btn btn-outline-primary">👎</a>
                     <a type="button" href="/comment/toukou" class="col-sm-4 col-md-3 btn btn-outline-primary ">コメント</a>

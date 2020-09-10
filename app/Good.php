@@ -13,9 +13,9 @@ class Good extends Model
     return $this->belongsTo(Question::class);
   }
 
-  public function user()
+  public function profile()
   {
-    return $this->belongsTo(User::class);
+    return $this->belongsTo(Profile::class);
   }
     //
 }
